@@ -20,8 +20,19 @@ set(HEADERS
         imconfig.h
 )
 
+set(BACKENDS
+        backends/imgui_impl_glfw.h
+        backends/imgui_impl_glfw.cpp
+        backends/imgui_impl_opengl3.h
+        backends/imgui_impl_opengl3.cpp
+        backends/imgui_impl_opengl3_loader.h
+)
+
+include_directories(./)
+
 
 add_library(ImGui
         ${SOURCE}
         ${HEADERS}
+        ${BACKENDS}
 )
