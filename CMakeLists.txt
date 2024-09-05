@@ -20,8 +20,11 @@ set(HEADERS
         imconfig.h
 )
 
+file(GLOB_RECURSE BACKENDS backends/*.h backends/*.cpp)
+
 
 add_library(ImGui
         ${SOURCE}
         ${HEADERS}
+        ${BACKENDS}
 )
